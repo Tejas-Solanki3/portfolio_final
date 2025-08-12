@@ -58,13 +58,25 @@ export default function AboutMe() {
   return (
     <motion.section 
       id="about" 
-      className="py-24 bg-secondary"
+      className="py-24 bg-secondary relative overflow-hidden"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="absolute -top-10 -right-10 opacity-20">
+            <svg width="250" height="250" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M100,0 A100,100 0 0,1 100,200" stroke="hsl(var(--accent))" strokeWidth="2" fill="none" strokeDasharray="5,10"/>
+                <path d="M100,20 A80,80 0 0,1 100,180" stroke="hsl(var(--accent))" strokeWidth="1" fill="none" strokeDasharray="5,5"/>
+            </svg>
+        </div>
+        <div className="absolute -bottom-12 -left-12 opacity-20">
+             <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 10 L190 190" stroke="hsl(var(--accent))" strokeWidth="1.5" strokeLinecap="round" strokeDasharray="0.1, 10" />
+                <path d="M190 10 L10 190" stroke="hsl(var(--accent))" strokeWidth="1.5" strokeLinecap="round" strokeDasharray="0.1, 10" />
+             </svg>
+        </div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading>About Me</SectionHeading>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div 

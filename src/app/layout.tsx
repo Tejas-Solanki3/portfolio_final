@@ -3,17 +3,17 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 import { ThemeProvider } from '@/components/theme-provider';
-import { Architects_Daughter, Inter } from 'next/font/google';
+import { Figtree, Inter } from 'next/font/google';
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
 });
 
-const architectsDaughter = Architects_Daughter({
+const figtree = Figtree({
   subsets: ['latin'],
-  weight: '400',
-  variable: '--font-architects-daughter',
+  weight: '800',
+  variable: '--font-figtree',
 });
 
 export const metadata: Metadata = {
@@ -32,7 +32,7 @@ export default function RootLayout({
         className={cn(
           'min-h-screen bg-background font-body antialiased',
           inter.variable,
-          architectsDaughter.variable
+          figtree.variable
         )}
       >
         <ThemeProvider
