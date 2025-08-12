@@ -5,6 +5,7 @@ import SectionHeading from './section-heading';
 import { Card, CardContent } from './ui/card';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import spidermanImage from './spiderman.png';
 
 export default function AboutMe() {
   const generatedBio = "I'm a passionate and driven second-year B.Tech student based in Mumbai, with a strong foundation in both creative design and technical development. My journey in technology is fueled by a desire to build things that are not only functional but also beautiful and intuitive. From developing full-stack web applications to crafting intricate 3D animations, I'm always eager to learn new skills and take on challenging projects.";
@@ -29,10 +30,11 @@ export default function AboutMe() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Image
-              src="/spiderman.png"
+              src={spidermanImage}
               alt="Spiderman illustration"
               fill
               className="object-contain rounded-lg p-2"
+              placeholder="blur"
             />
           </motion.div>
           <div className="space-y-6">
