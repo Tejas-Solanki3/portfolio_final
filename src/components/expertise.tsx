@@ -14,6 +14,7 @@ const cardVariants = {
     y: 0,
     transition: {
       delay: i * 0.1,
+      duration: 0.5
     },
   }),
 };
@@ -22,7 +23,7 @@ export default function Expertise() {
   return (
     <motion.section 
       id="expertise" 
-      className="py-24 bg-secondary"
+      className="py-24"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -38,17 +39,22 @@ export default function Expertise() {
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true }}
+              viewport={{ once: true, amount: 0.4 }}
             >
-              <Card className="h-full sketch-border flex flex-col hover:shadow-accent/20 hover:shadow-lg transition-shadow">
+              <Card className="h-full sketch-border flex flex-col hover:shadow-accent/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 group">
                 <CardHeader className="flex-row items-center gap-4">
-                  <area.icon className="h-8 w-8 text-accent" />
-                  <CardTitle className='font-headline'>{area.category}</CardTitle>
+                  <div className="p-3 bg-accent/10 rounded-full border-2 border-dashed border-accent/20 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300">
+                    <area.icon className="h-8 w-8 text-accent transition-colors" />
+                  </div>
+                  <CardTitle className='font-headline text-2xl'>{area.category}</CardTitle>
                 </CardHeader>
-                <CardContent className="flex-grow flex flex-wrap gap-2">
-                  {area.skills.map(skill => (
-                    <Badge key={skill} variant="secondary" className="text-sm font-mono">{skill}</Badge>
-                  ))}
+                <CardContent className="flex-grow flex flex-col justify-center gap-4 p-6 pt-0">
+                    <p className="text-muted-foreground text-sm">{area.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                        {area.skills.map(skill => (
+                            <Badge key={skill} variant="secondary" className="text-sm font-mono group-hover:bg-accent/20 transition-colors">{skill}</Badge>
+                        ))}
+                    </div>
                 </CardContent>
               </Card>
             </motion.div>

@@ -10,6 +10,7 @@ import { Sparkles, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent } from './ui/card';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const projectDescriptions = projects.map((p) => p.description);
 
@@ -79,48 +80,19 @@ export default function AboutMe() {
         <SectionHeading>About Me</SectionHeading>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div 
-            className="w-full max-w-md mx-auto"
+            className="w-full max-w-md mx-auto aspect-square relative"
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" className="w-full h-full object-cover">
-                <filter id="sketch-filter">
-                    <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise"/>
-                    <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G"/>
-                </filter>
-                <g filter="url(#sketch-filter)" stroke="hsl(var(--foreground))" strokeWidth="2" fill="none">
-                    <path d="M256 20c-30 0-56 20-56 45 0 25 26 45 56 45s56-20 56-45c0-25-26-45-56-45z"/>
-                    <path d="M200 65c-10 15-15 35-15 55 0 30 10 55 30 75"/>
-                    <path d="M312 65c10 15 15 35 15 55 0 30-10 55-30 75"/>
-                    <path d="M256 65v130"/>
-                    <path d="M200 120s-10-15-30-15-40 20-40 40c0 20 10 40 30 50s40 10 40 10"/>
-                    <path d="M312 120s10-15 30-15 40 20 40 40c0 20-10 40-30 50s-40 10-40 10"/>
-                    <path d="M256 195c-40 0-80 30-80 80v150c0 30 30 50 80 50s80-20 80-50V275c0-50-40-80-80-80z"/>
-                    <path d="M176 275v150m160-150v150"/>
-                    <path d="M176 350c-20-10-40-10-60 0s-30 40-20 60 40 30 60 20 30-40 20-80z"/>
-                    <path d="M336 350c20-10 40-10 60 0s30 40 20 60-40 30-60 20-30-40-20-80z"/>
-                    <path d="M256 275v190m-80-50h160"/>
-                    <path d="M176 275s-20 20-20 40c0 20 20 40 20 40"/>
-                    <path d="M336 275s20 20 20 40c0 20-20 40-20 40"/>
-                </g>
-                <g stroke="hsl(var(--accent))" strokeWidth="1" fill="none" transform="rotate(5 256 256)">
-                    <path d="M256 20c-30 0-56 20-56 45 0 25 26 45 56 45s56-20 56-45c0-25-26-45-56-45z"/>
-                    <path d="M200 65c-10 15-15 35-15 55 0 30 10 55 30 75"/>
-                    <path d="M312 65c10 15 15 35 15 55 0 30-10 55-30 75"/>
-                    <path d="M256 65v130"/>
-                    <path d="M200 120s-10-15-30-15-40 20-40 40c0 20 10 40 30 50s40 10 40 10"/>
-                    <path d="M312 120s10-15 30-15 40 20 40 40c0 20-10 40-30 50s-40 10-40 10"/>
-                    <path d="M256 195c-40 0-80 30-80 80v150c0 30 30 50 80 50s80-20 80-50V275c0-50-40-80-80-80z"/>
-                    <path d="M176 275v150m160-150v150"/>
-                    <path d="M176 350c-20-10-40-10-60 0s-30 40-20 60 40 30 60 20 30-40 20-80z"/>
-                    <path d="M336 350c20-10 40-10 60 0s30 40 20 60-40 30-60 20-30-40-20-80z"/>
-                    <path d="M256 275v190m-80-50h160"/>
-                    <path d="M176 275s-20 20-20 40c0 20 20 40 20 40"/>
-                    <path d="M336 275s20 20 20 40c0 20-20 40-20 40"/>
-                </g>
-            </svg>
+            <Image
+              src="https://storage.googleapis.com/aif-stg-testing-images/mcn/d18a385f-a3d8-4f8a-9a84-7a32d1645e99.png"
+              alt="Spiderman with a laptop"
+              fill
+              className="object-cover rounded-lg sketch-border p-2"
+              data-ai-hint="spiderman laptop"
+            />
           </motion.div>
           <div className="space-y-6">
             <Card>

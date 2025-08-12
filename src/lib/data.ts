@@ -1,4 +1,4 @@
-import { Code, Bot, Database, Server, Wind, Cable } from "lucide-react";
+import { Code, Bot, Database, Server, Wind, Cable, AppWindow } from "lucide-react";
 
 export const projects = [
   {
@@ -124,31 +124,37 @@ export const expertise = [
   {
     category: 'Frontend',
     icon: Code,
+    description: 'Crafting responsive and dynamic user interfaces with modern technologies.',
     skills: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Framer Motion'],
   },
   {
     category: 'Backend',
     icon: Server,
+    description: 'Building robust and scalable server-side applications and APIs.',
     skills: ['Node.js', 'Express', 'Python', 'Flask'],
   },
   {
     category: 'Database',
     icon: Database,
+    description: 'Managing and designing databases for efficient data storage and retrieval.',
     skills: ['MongoDB', 'PostgreSQL', 'Firebase'],
   },
   {
     category: 'AI/ML',
     icon: Bot,
+    description: 'Exploring the world of AI, building intelligent models and agents.',
     skills: ['Genkit', 'TensorFlow', 'scikit-learn'],
   },
   {
-    category: 'DevOps',
-    icon: Wind,
-    skills: ['Docker', 'Git', 'CI/CD'],
+    category: 'App Dev',
+    icon: AppWindow,
+    description: 'Creating mobile applications for both Android and iOS platforms.',
+    skills: ['React Native', 'Flutter', 'Swift'],
   },
   {
     category: 'Animation',
     icon: Cable,
-    skills: ['Blender', 'Figma'],
+    description: 'Bringing ideas to life through 3D modeling and motion design.',
+    skills: ['Blender', 'Figma', 'After Effects'],
   },
 ];
