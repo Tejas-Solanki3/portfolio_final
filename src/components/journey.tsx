@@ -3,17 +3,39 @@ import SectionHeading from './section-heading';
 import { journeyItems } from '@/lib/data';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function Journey() {
   return (
-    <section id="journey" className="py-24">
+    <motion.section 
+      id="journey" 
+      className="py-24"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading>My Journey</SectionHeading>
         <div className="relative">
-          <div className="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-border" aria-hidden="true"></div>
+          <motion.div 
+            className="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-border" 
+            aria-hidden="true"
+            initial={{ height: 0 }}
+            whileInView={{ height: '100%' }}
+            viewport={{ once: true }}
+            transition={{ duration: 2, ease: "linear" }}
+          ></motion.div>
           <div className="space-y-12">
             {journeyItems.map((item, index) => (
-              <div key={index} className="relative flex items-center group">
+              <motion.div 
+                key={index} 
+                className="relative flex items-center group"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+              >
                 <div className="md:hidden absolute left-0 top-1/2 -translate-y-1/2 w-full h-0.5 bg-border"></div>
                 <div className={`flex w-full items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} md:gap-8`}>
                   <div className="hidden md:block w-1/2"></div>
@@ -38,14 +60,20 @@ export default function Journey() {
                     </Card>
                   </div>
                 </div>
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+                <motion.div 
+                    className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.5, delay: index * 0.2 + 0.2 }}
+                >
                     <div className="w-4 h-4 rounded-full bg-accent border-4 border-background"></div>
-                </div>
-              </div>
+                </motion.div>
+              </motion.div>
             ))}
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

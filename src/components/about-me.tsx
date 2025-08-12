@@ -10,6 +10,7 @@ import { Sparkles, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent } from './ui/card';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const projectDescriptions = projects.map((p) => p.description);
 
@@ -55,11 +56,24 @@ export default function AboutMe() {
   };
 
   return (
-    <section id="about" className="py-24 bg-secondary">
+    <motion.section 
+      id="about" 
+      className="py-24 bg-secondary"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading>About Me</SectionHeading>
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="w-full max-w-md mx-auto">
+          <motion.div 
+            className="w-full max-w-md mx-auto"
+            initial={{ scale: 0.9, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <Image
               src="https://placehold.co/600x600.png"
               alt="Astra Sharma"
@@ -68,7 +82,7 @@ export default function AboutMe() {
               className="rounded-lg shadow-2xl object-cover aspect-square"
               data-ai-hint="portrait person"
             />
-          </div>
+          </motion.div>
           <div className="space-y-6">
             <Card>
               <CardContent className="pt-6">
@@ -105,6 +119,6 @@ export default function AboutMe() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

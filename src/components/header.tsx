@@ -6,6 +6,7 @@ import { Menu, X, Sparkles } from 'lucide-react';
 import { Button } from './ui/button';
 import { navLinks } from '@/lib/data';
 import { cn } from '@/lib/utils';
+import { ThemeToggle } from './theme-toggle';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,24 +33,27 @@ export default function Header() {
               Astra Portfolio
             </Link>
           </div>
-          <nav className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.hash}
-                  href={link.hash}
-                  className="text-primary hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                >
-                  {link.name}
-                </Link>
-              ))}
+          <div className='flex items-center gap-2'>
+            <nav className="hidden md:block">
+              <div className="ml-10 flex items-baseline space-x-4">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.hash}
+                    href={link.hash}
+                    className="text-primary hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            </nav>
+            <ThemeToggle />
+            <div className="md:hidden">
+              <Button onClick={() => setIsOpen(!isOpen)} variant="ghost" size="icon">
+                {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                <span className="sr-only">Open menu</span>
+              </Button>
             </div>
-          </nav>
-          <div className="md:hidden">
-            <Button onClick={() => setIsOpen(!isOpen)} variant="ghost" size="icon">
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              <span className="sr-only">Open menu</span>
-            </Button>
           </div>
         </div>
       </div>

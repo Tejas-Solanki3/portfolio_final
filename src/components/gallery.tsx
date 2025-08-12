@@ -9,37 +9,58 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { Button } from './ui/button';
 import { Download, ExternalLink, Eye } from 'lucide-react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export default function Gallery() {
   const [selectedItem, setSelectedItem] = useState<(typeof galleryItems)[0] | null>(null);
 
   return (
-    <section id="gallery" className="py-24 bg-secondary">
+    <motion.section 
+      id="gallery" 
+      className="py-24 bg-secondary"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading>Gallery</SectionHeading>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {galleryItems.map((item, index) => (
-            <Dialog key={index}>
+            <Dialog key={index} onOpenChange={(open) => !open && setSelectedItem(null)}>
               <DialogTrigger asChild>
-                <Card
-                  className="group relative overflow-hidden rounded-lg cursor-pointer"
-                  onClick={() => setSelectedItem(item)}
+                <motion.div
+                  variants={cardVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.5 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
                 >
-                  <Image
-                    src={item.imageUrl}
-                    alt={item.title}
-                    width={400}
-                    height={400}
-                    className="object-cover w-full h-full aspect-square transition-transform duration-300 group-hover:scale-105"
-                    data-ai-hint={item.imageAiHint}
-                  />
-                  <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="text-center text-white p-4">
-                      <Eye className="h-8 w-8 mx-auto mb-2" />
-                      <h3 className="font-bold">{item.title}</h3>
+                  <Card
+                    className="group relative overflow-hidden rounded-lg cursor-pointer"
+                    onClick={() => setSelectedItem(item)}
+                  >
+                    <Image
+                      src={item.imageUrl}
+                      alt={item.title}
+                      width={400}
+                      height={400}
+                      className="object-cover w-full h-full aspect-square transition-transform duration-300 group-hover:scale-105"
+                      data-ai-hint={item.imageAiHint}
+                    />
+                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="text-center text-white p-4">
+                        <Eye className="h-8 w-8 mx-auto mb-2" />
+                        <h3 className="font-bold">{item.title}</h3>
+                      </div>
                     </div>
-                  </div>
-                </Card>
+                  </Card>
+                </motion.div>
               </DialogTrigger>
               <DialogContent className="max-w-4xl">
                 {selectedItem && (
@@ -74,6 +95,6 @@ export default function Gallery() {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

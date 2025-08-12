@@ -2,12 +2,25 @@ import React from 'react';
 import { Button } from './ui/button';
 import Link from 'next/link';
 import { ArrowDown, Mail, Linkedin, Github } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const LandingPage = () => {
   return (
     <section id="home" className="relative w-full h-screen flex items-center justify-center text-center overflow-hidden">
       <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
-        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-accent/20 opacity-20 blur-[100px]"></div>
+        <motion.div 
+          className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-accent/20 opacity-20 blur-[100px]"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.1, 0.3, 0.1]
+          }}
+          transition={{
+            duration: 10,
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatType: 'loop'
+          }}
+        ></motion.div>
       </div>
       
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
