@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-sm text-muted-foreground text-center md:text-left">
-            &copy; {new Date().getFullYear()} Astra Portfolio. All rights reserved.
+            &copy; {new Date().getFullYear()} Tejas Solanki. All rights reserved.
           </p>
           <div className="flex gap-6">
             <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">

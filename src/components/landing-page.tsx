@@ -9,25 +9,15 @@ import { motion } from 'framer-motion';
 const LandingPage = () => {
   return (
     <section id="home" className="relative w-full h-screen flex items-center justify-center text-center overflow-hidden">
-      <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
-        <motion.div 
-          className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-accent/20 opacity-20 blur-[100px]"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.1, 0.3, 0.1]
-          }}
-          transition={{
-            duration: 10,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatType: 'loop'
-          }}
-        ></motion.div>
+        <div className="absolute inset-0 -z-10 h-full w-full bg-background dark:bg-black bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+        <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-accent/20 opacity-20 blur-[100px] dark:bg-teal-500/20"></div>
+        <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
+        <div className="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"></div>
       </div>
       
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-5xl md:text-7xl font-extrabold text-primary font-headline tracking-tight mb-4 animate-fade-in-down">
-          Astra Sharma
+          Tejas Solanki
         </h1>
         <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground mb-8 animate-fade-in-up">
           A creative 2nd year B.Tech student from Mumbai, passionate about building beautiful and functional digital experiences.

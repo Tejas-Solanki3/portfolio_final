@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Sparkles } from 'lucide-react';
+import { Menu, X, Code } from 'lucide-react';
 import { Button } from './ui/button';
 import { navLinks } from '@/lib/data';
 import { cn } from '@/lib/utils';
@@ -29,8 +29,8 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link href="/" className="text-2xl font-bold text-primary font-headline flex items-center gap-2">
-              <Sparkles className="text-accent" />
-              Astra Portfolio
+              <Code className="text-accent" />
+              Tejas Solanki
             </Link>
           </div>
           <div className='flex items-center gap-2'>

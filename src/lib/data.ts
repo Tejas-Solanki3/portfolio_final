@@ -18,13 +18,13 @@ export const projects = [
     category: 'animation',
   },
   {
-    title: 'Mobile App UI/UX',
-    description: 'Designed the user interface and experience for a concept mobile application for local event discovery.',
-    tags: ['Figma', 'UI/UX', 'Design'],
+    title: 'Event Discovery App',
+    description: 'A mobile app for discovering local events, built with React Native, featuring real-time updates and user profiles.',
+    tags: ['React Native', 'Firebase', 'Mobile App'],
     imageUrl: 'https://placehold.co/600x400.png',
     imageAiHint: 'mobile app',
     link: 'https://github.com',
-    category: 'design',
+    category: 'app',
   },
     {
     title: 'E-commerce Platform',
@@ -85,8 +85,8 @@ export const journeyItems = [
     },
     {
         year: '2024',
-        title: 'Joined Design Club',
-        description: 'Became a member of the university\'s design club, where I started learning about UI/UX principles and using tools like Figma.',
+        title: 'Joined Developer Club',
+        description: 'Became a member of the university\'s developer club, where I started learning about app development and using tools like React Native.',
         imageUrl: 'https://placehold.co/200x200.png',
         imageAiHint: 'design team'
     },
