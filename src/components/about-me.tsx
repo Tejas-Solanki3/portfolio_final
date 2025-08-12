@@ -87,11 +87,10 @@ export default function AboutMe() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Image
-              src="https://storage.googleapis.com/aif-stg-testing-images/mcn/d18a385f-a3d8-4f8a-9a84-7a32d1645e99.png"
-              alt="Spiderman with a laptop"
+              src="/spiderman.png"
+              alt="Spiderman illustration"
               fill
               className="object-cover rounded-lg p-2"
-              data-ai-hint="spiderman laptop"
             />
           </motion.div>
           <div className="space-y-6">
