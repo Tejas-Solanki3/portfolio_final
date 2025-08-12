@@ -90,7 +90,7 @@ export default function AboutMe() {
               src="https://storage.googleapis.com/aif-stg-testing-images/mcn/d18a385f-a3d8-4f8a-9a84-7a32d1645e99.png"
               alt="Spiderman with a laptop"
               fill
-              className="object-cover rounded-lg sketch-border p-2"
+              className="object-cover rounded-lg p-2"
               data-ai-hint="spiderman laptop"
             />
           </motion.div>
