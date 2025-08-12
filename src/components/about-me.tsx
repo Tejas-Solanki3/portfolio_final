@@ -1,59 +1,13 @@
 'use client';
 
-import React, { useState, useTransition } from 'react';
-import { generateAboutMe } from '@/ai/flows/generate-about-me';
-import { projects } from '@/lib/data';
+import React from 'react';
 import SectionHeading from './section-heading';
-import { Input } from './ui/input';
-import { Button } from './ui/button';
-import { Sparkles, Loader2 } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent } from './ui/card';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-const projectDescriptions = projects.map((p) => p.description);
-
 export default function AboutMe() {
-  const [keywords, setKeywords] = useState('innovative, team player, leader');
-  const [generatedBio, setGeneratedBio] = useState(
-    "I'm a passionate and driven second-year B.Tech student based in Mumbai, with a strong foundation in both creative design and technical development. My journey in technology is fueled by a desire to build things that are not only functional but also beautiful and intuitive. From developing full-stack web applications to crafting intricate 3D animations, I'm always eager to learn new skills and take on challenging projects."
-  );
-  const [isPending, startTransition] = useTransition();
-  const { toast } = useToast();
-
-  const handleGenerateBio = async () => {
-    startTransition(async () => {
-      try {
-        const keywordArray = keywords.split(',').map((k) => k.trim()).filter((k) => k);
-        if (keywordArray.length === 0) {
-          toast({
-            title: 'No keywords provided',
-            description: 'Please enter some keywords to generate a bio.',
-            variant: 'destructive',
-          });
-          return;
-        }
-
-        const result = await generateAboutMe({
-          keywords: keywordArray,
-          projectDescriptions,
-        });
-        setGeneratedBio(result.aboutMe);
-        toast({
-          title: 'Bio Generated!',
-          description: 'Your new AI-powered bio is ready.',
-        });
-      } catch (error) {
-        console.error('Failed to generate bio:', error);
-        toast({
-          title: 'Error',
-          description: 'Failed to generate a new bio. Please try again.',
-          variant: 'destructive',
-        });
-      }
-    });
-  };
+  const generatedBio = "I'm a passionate and driven second-year B.Tech student based in Mumbai, with a strong foundation in both creative design and technical development. My journey in technology is fueled by a desire to build things that are not only functional but also beautiful and intuitive. From developing full-stack web applications to crafting intricate 3D animations, I'm always eager to learn new skills and take on challenging projects.";
 
   return (
     <motion.section
@@ -87,33 +41,6 @@ export default function AboutMe() {
                 <p className="text-muted-foreground whitespace-pre-line">{generatedBio}</p>
               </CardContent>
             </Card>
-
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-primary flex items-center gap-2">
-                <Sparkles className="text-accent h-5 w-5" />
-                Generate a New Bio
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                Enter some keywords that describe you (comma-separated) and let AI craft a new introduction.
-              </p>
-              <div className="flex gap-2">
-                <Input
-                  type="text"
-                  value={keywords}
-                  onChange={(e) => setKeywords(e.target.value)}
-                  placeholder="e.g., creative, problem-solver"
-                  disabled={isPending}
-                />
-                <Button onClick={handleGenerateBio} disabled={isPending}>
-                  {isPending ? (
-                    <Loader2 className="h-4 w-4 animate-spin" />
-                  ) : (
-                    <Sparkles className="h-4 w-4" />
-                  )}
-                  <span className="sr-only">Generate</span>
-                </Button>
-              </div>
-            </div>
           </div>
         </div>
       </div>
