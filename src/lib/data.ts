@@ -1,3 +1,5 @@
+import { Code, Bot, Database, Server, Wind, Cable } from "lucide-react";
+
 export const projects = [
   {
     title: 'Portfolio Website',
@@ -111,8 +113,42 @@ export const journeyItems = [
 
 export const navLinks = [
   { name: 'About', hash: '#about' },
+  { name: 'Expertise', hash: '#expertise' },
   { name: 'Projects', hash: '#projects' },
   { name: 'Gallery', hash: '#gallery' },
   { name: 'Journey', hash: '#journey' },
   { name: 'Contact', hash: '#contact' },
+];
+
+export const expertise = [
+  {
+    category: 'Frontend',
+    icon: Code,
+    skills: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'Framer Motion'],
+  },
+  {
+    category: 'Backend',
+    icon: Server,
+    skills: ['Node.js', 'Express', 'Python', 'Flask'],
+  },
+  {
+    category: 'Database',
+    icon: Database,
+    skills: ['MongoDB', 'PostgreSQL', 'Firebase'],
+  },
+  {
+    category: 'AI/ML',
+    icon: Bot,
+    skills: ['Genkit', 'TensorFlow', 'scikit-learn'],
+  },
+  {
+    category: 'DevOps',
+    icon: Wind,
+    skills: ['Docker', 'Git', 'CI/CD'],
+  },
+  {
+    category: 'Animation',
+    icon: Cable,
+    skills: ['Blender', 'Figma'],
+  },
 ];

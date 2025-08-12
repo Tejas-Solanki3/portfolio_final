@@ -6,6 +6,7 @@ import Projects from '@/components/projects';
 import AboutMe from '@/components/about-me';
 import Contact from '@/components/contact';
 import Footer from '@/components/footer';
+import Expertise from '@/components/expertise';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <main className="flex-1">
         <LandingPage />
         <AboutMe />
+        <Expertise />
         <Projects />
         <Gallery />
         <Journey />
