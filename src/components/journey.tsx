@@ -39,7 +39,7 @@ export default function Journey() {
               >
                 <Card className="h-full sketch-border p-4 hover:shadow-accent/20 hover:shadow-lg transition-shadow">
                   <CardContent className="flex items-start gap-6 p-2">
-                    <div className="p-3 bg-accent/10 rounded-full border-2 border-dashed border-accent/20">
+                    <div className="p-3 bg-accent/10 rounded-lg shadow-sm">
                         <Icon className="h-8 w-8 text-accent" />
                     </div>
                     <div className='flex-1'>

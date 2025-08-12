@@ -43,7 +43,7 @@ export default function Expertise() {
             >
               <Card className="h-full sketch-border flex flex-col hover:shadow-accent/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 group">
                 <CardHeader className="flex-row items-center gap-4">
-                  <div className="p-3 bg-accent/10 rounded-full border-2 border-dashed border-accent/20 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300">
+                  <div className="p-3 bg-accent/10 rounded-lg shadow-sm group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300">
                     <area.icon className="h-8 w-8 text-accent transition-colors" />
                   </div>
                   <CardTitle className='font-headline text-2xl'>{area.category}</CardTitle>
