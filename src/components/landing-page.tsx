@@ -14,30 +14,6 @@ const LandingPage = () => {
             <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_farthest-side,rgba(120,81,255,0.15),rgba(255,255,255,0))]"></div>
         </div>
         
-      <motion.div 
-        className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 opacity-30"
-        initial={{ scale: 0, rotate: -30 }}
-        animate={{ scale: 1, rotate: 0 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
-      >
-        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M50 150 Q100 50 150 150" stroke="hsl(var(--accent))" strokeWidth="2" fill="none" strokeDasharray="4 4" />
-          <path d="M60 140 Q100 70 140 140" stroke="hsl(var(--accent))" strokeWidth="1" fill="none" />
-        </svg>
-      </motion.div>
-
-      <motion.div 
-        className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 opacity-30"
-        initial={{ scale: 0, rotate: 30 }}
-        animate={{ scale: 1, rotate: 0 }}
-        transition={{ duration: 0.5, delay: 1.0 }}
-      >
-        <svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M25 25 L125 125" stroke="hsl(var(--accent))" strokeWidth="1" strokeDasharray="5 5" />
-            <path d="M125 25 L25 125" stroke="hsl(var(--accent))" strokeWidth="1" strokeDasharray="5 5" />
-        </svg>
-      </motion.div>
-
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h1 
           className="text-5xl md:text-7xl font-extrabold text-primary font-headline tracking-tight mb-4"
@@ -47,14 +23,7 @@ const LandingPage = () => {
         >
           Tejas Solanki
         </motion.h1>
-        <motion.p 
-          className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          A creative 2nd year B.Tech student from Mumbai, passionate about building beautiful and functional digital experiences.
-        </motion.p>
+        
         <motion.div 
           className="flex flex-col sm:flex-row items-center justify-center gap-4"
           initial={{ opacity: 0, scale: 0.9 }}
