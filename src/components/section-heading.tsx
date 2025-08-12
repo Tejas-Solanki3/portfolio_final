@@ -7,8 +7,10 @@ type SectionHeadingProps = {
 
 export default function SectionHeading({ children, className }: SectionHeadingProps) {
   return (
-    <h2 className={`text-3xl font-bold text-center text-primary mb-12 capitalize font-headline ${className}`}>
-      {children}
-    </h2>
+    <div className="flex justify-center mb-12">
+        <h2 className={`text-3xl font-bold text-center text-primary capitalize font-headline sketch-border inline-block ${className}`}>
+            {children}
+        </h2>
+    </div>
   );
 }

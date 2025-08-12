@@ -65,37 +65,47 @@ export const galleryItems = [
         imageUrl: 'https://placehold.co/600x400.png',
         imageAiHint: 'modern architecture',
         downloadUrl: '/downloads/arch-viz.png'
+    },
+    {
+        title: 'Synthwave Sunset',
+        description: 'A retro-futuristic landscape scene.',
+        imageUrl: 'https://placehold.co/600x400.png',
+        imageAiHint: 'synthwave sunset',
+        link: 'https://example.com'
+    },
+    {
+        title: 'Product Mockup',
+        description: 'A sleek mockup for a new tech gadget.',
+        imageUrl: 'https://placehold.co/600x400.png',
+        imageAiHint: 'product mockup',
+        downloadUrl: '/downloads/product-mockup.png'
     }
 ];
 
 export const journeyItems = [
     {
         year: '2023',
-        title: 'Started B.Tech at University of Mumbai',
+        title: 'Started B.Tech',
         description: 'Began my journey in Computer Engineering, diving deep into the fundamentals of programming and computer science.',
-        imageUrl: 'https://placehold.co/200x200.png',
-        imageAiHint: 'university campus'
+        icon: 'university'
     },
     {
         year: '2023',
         title: 'First Web Project',
-        description: 'Built my first static website using HTML, CSS, and JavaScript. It was a simple blog, but it sparked my passion for web development.',
-        imageUrl: 'https://placehold.co/200x200.png',
-        imageAiHint: 'code screen'
+        description: 'Built my first static website using HTML, CSS, and JavaScript. It sparked my passion for web development.',
+        icon: 'code'
     },
     {
         year: '2024',
         title: 'Joined Developer Club',
-        description: 'Became a member of the university\'s developer club, where I started learning about app development and using tools like React Native.',
-        imageUrl: 'https://placehold.co/200x200.png',
-        imageAiHint: 'design team'
+        description: 'Became a member of the university\'s developer club, learning about app development and React Native.',
+        icon: 'team'
     },
     {
         year: '2024',
         title: 'Hackathon Winner',
-        description: 'Won 1st place in a university-level hackathon for developing an innovative solution for local community problems.',
-        imageUrl: 'https://placehold.co/200x200.png',
-        imageAiHint: 'hackathon trophy'
+        description: 'Won 1st place in a university hackathon for an innovative community solution.',
+        icon: 'hackathon'
     },
 ];
 

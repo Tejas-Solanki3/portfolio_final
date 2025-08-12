@@ -30,7 +30,7 @@ export default function Gallery() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading>Gallery</SectionHeading>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {galleryItems.map((item, index) => (
             <Dialog key={index} onOpenChange={(open) => !open && setSelectedItem(null)}>
               <DialogTrigger asChild>
@@ -42,7 +42,7 @@ export default function Gallery() {
                   transition={{ duration: 0.3, delay: index * 0.1 }}
                 >
                   <Card
-                    className="group relative overflow-hidden rounded-lg cursor-pointer"
+                    className="group relative overflow-hidden rounded-lg cursor-pointer sketch-border"
                     onClick={() => setSelectedItem(item)}
                   >
                     <Image
@@ -56,17 +56,17 @@ export default function Gallery() {
                     <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="text-center text-white p-4">
                         <Eye className="h-8 w-8 mx-auto mb-2" />
-                        <h3 className="font-bold">{item.title}</h3>
+                        <h3 className="font-bold font-headline">{item.title}</h3>
                       </div>
                     </div>
                   </Card>
                 </motion.div>
               </DialogTrigger>
-              <DialogContent className="max-w-4xl">
+              <DialogContent className="max-w-4xl sketch-border">
                 {selectedItem && (
                   <>
                     <DialogHeader>
-                      <DialogTitle>{selectedItem.title}</DialogTitle>
+                      <DialogTitle className="font-headline">{selectedItem.title}</DialogTitle>
                       <DialogDescription>{selectedItem.description}</DialogDescription>
                     </DialogHeader>
                     <div className="relative aspect-video mt-4">
