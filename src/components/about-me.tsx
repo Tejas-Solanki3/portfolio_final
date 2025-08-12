@@ -29,13 +29,15 @@ export default function AboutMe() {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Image
-              src={spidermanImage}
-              alt="Spiderman illustration"
-              fill
-              className="object-contain rounded-lg p-2"
-              placeholder="blur"
-            />
+            <div className="bg-white/90 dark:bg-slate-900/80 rounded-2xl shadow-lg p-4 h-full w-full">
+              <Image
+                src={spidermanImage}
+                alt="Spiderman illustration"
+                fill
+                className="object-contain rounded-lg"
+                placeholder="blur"
+              />
+            </div>
           </motion.div>
           <div className="space-y-6">
             <Card>
