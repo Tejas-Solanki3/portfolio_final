@@ -9,9 +9,7 @@ import { motion } from 'framer-motion';
 const LandingPage = () => {
   return (
     <section id="home" className="relative w-full h-screen flex items-center justify-center text-center overflow-hidden">
-        <div className="absolute inset-0 -z-10 h-full w-full bg-background">
-            <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
-            <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_farthest-side,rgba(120,81,255,0.15),rgba(255,255,255,0))]"></div>
+        <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,81,255,0.3),rgba(255,255,255,0))]">
         </div>
         
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,12 +28,12 @@ const LandingPage = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <Button asChild size="lg" className="sketch-border">
+          <Button asChild size="lg">
             <Link href="#contact">
               Get in Touch <Mail className="ml-2 h-4 w-4" />
             </Link>
           </Button>
-          <Button asChild variant="outline" size="lg" className="sketch-border">
+          <Button asChild variant="outline" size="lg">
             <Link href="#projects">
               View My Work <ArrowDown className="ml-2 h-4 w-4" />
             </Link>
