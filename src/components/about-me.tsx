@@ -13,7 +13,7 @@ export default function AboutMe() {
   return (
     <motion.section
       id="about"
-      className="py-24 bg-secondary relative overflow-hidden"
+      className="py-24 relative overflow-hidden"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -29,7 +29,7 @@ export default function AboutMe() {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <div className="bg-white/90 dark:bg-slate-900/80 rounded-2xl shadow-lg p-4 h-full w-full">
+            <div className="bg-white/10 dark:bg-slate-900/80 rounded-2xl shadow-lg p-4 h-full w-full backdrop-blur-sm border border-white/20">
               <Image
                 src={spidermanImage}
                 alt="Spiderman illustration"
@@ -40,7 +40,7 @@ export default function AboutMe() {
             </div>
           </motion.div>
           <div className="space-y-6">
-            <Card>
+            <Card className="bg-card/80 backdrop-blur-sm border-white/20">
               <CardContent className="pt-6">
                 <p className="text-muted-foreground whitespace-pre-line">{generatedBio}</p>
               </CardContent>
