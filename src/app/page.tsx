@@ -16,8 +16,8 @@ export default function Home() {
       <main className="flex-1">
         <LampContainer className="py-20 md:py-36">
           <LandingPage />
+          <AboutMe />
         </LampContainer>
-        <AboutMe />
         <Expertise />
         <Projects />
         <Gallery />
