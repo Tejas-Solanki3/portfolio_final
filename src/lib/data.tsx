@@ -72,83 +72,25 @@ export const journeyItems = [
         ),
     },
      {
-        title: 'Late 2024',
+        title: 'Dec 2024',
         content: (
           <div>
-            <h4 className="font-bold text-lg mb-2">First Web Project</h4>
+            <h4 className="font-bold text-lg mb-2">Won ITM Buildathon 3.0</h4>
             <p className="text-muted-foreground text-sm font-normal mb-8">
-              Built my first static website using HTML, CSS, and JavaScript. It sparked my passion for web development and design.
+              Achieved first place in my college’s flagship hackathon, a significant milestone early in my journey.
             </p>
             <div className="grid grid-cols-2 gap-4">
               <Image
                 src="https://placehold.co/600x400.png"
-                alt="Code on a screen"
+                alt="Hackathon trophy"
                 width={500}
                 height={500}
                 className="rounded-lg object-cover h-full w-full shadow-md"
-                data-ai-hint="code editor"
+                data-ai-hint="hackathon trophy"
               />
                <Image
                 src="https://placehold.co/600x400.png"
-                alt="Simple website screenshot"
-                width={500}
-                height={500}
-                className="rounded-lg object-cover h-full w-full shadow-md"
-                data-ai-hint="simple website"
-              />
-            </div>
-          </div>
-        ),
-    },
-    {
-        title: '2025',
-        content: (
-          <div>
-            <h4 className="font-bold text-lg mb-2">Joined Developer Club</h4>
-            <p className="text-muted-foreground text-sm font-normal mb-8">
-             Became a member of the university's developer club, learning about app development and collaborating on projects with peers.
-            </p>
-            <div className="grid grid-cols-2 gap-4">
-              <Image
-                src="https://placehold.co/600x400.png"
-                alt="Team working together"
-                width={500}
-                height={500}
-                className="rounded-lg object-cover h-full w-full shadow-md"
-                data-ai-hint="team collaboration"
-              />
-              <Image
-                src="https://placehold.co/600x400.png"
-                alt="React Native code"
-                width={500}
-                height={500}
-                className="rounded-lg object-cover h-full w-full shadow-md"
-                data-ai-hint="mobile app code"
-              />
-            </div>
-          </div>
-        ),
-    },
-     {
-        title: 'Mid 2025',
-        content: (
-          <div>
-            <h4 className="font-bold text-lg mb-2">Hackathon Winner</h4>
-            <p className="text-muted-foreground text-sm font-normal mb-8">
-              Won 1st place in a university hackathon for an innovative community solution app, which was a huge confidence booster.
-            </p>
-            <div className="grid grid-cols-2 gap-4">
-              <Image
-                src="https://placehold.co/600x400.png"
-                alt="Trophy for winning"
-                width={500}
-                height={500}
-                className="rounded-lg object-cover h-full w-full shadow-md"
-                data-ai-hint="trophy award"
-              />
-               <Image
-                src="https://placehold.co/600x400.png"
-                alt="People celebrating"
+                alt="Team celebrating a win"
                 width={500}
                 height={500}
                 className="rounded-lg object-cover h-full w-full shadow-md"
@@ -159,12 +101,76 @@ export const journeyItems = [
         ),
     },
     {
+        title: 'Feb 2025',
+        content: (
+          <div>
+            <h4 className="font-bold text-lg mb-2">Won IMAGINE Hackathon (PIWOT)</h4>
+            <p className="text-muted-foreground text-sm font-normal mb-8">
+             Secured a victory in a prestigious national-level hackathon organized by the PanIIT Alumni India, competing against top talent.
+            </p>
+            <div className="grid grid-cols-2 gap-4">
+              <Image
+                src="https://placehold.co/600x400.png"
+                alt="Group of developers at a hackathon"
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-full w-full shadow-md"
+                data-ai-hint="hackathon event"
+              />
+              <Image
+                src="https://placehold.co/600x400.png"
+                alt="PanIIT logo"
+                width={500}
+                height={500}
+                className="rounded-lg object-contain h-full w-full shadow-md"
+                data-ai-hint="tech logo"
+              />
+            </div>
+          </div>
+        ),
+    },
+     {
+        title: 'Project Journey',
+        content: (
+          <div>
+            <h4 className="font-bold text-lg mb-2">Exploring Diverse Tech Domains</h4>
+            <p className="text-muted-foreground text-sm font-normal mb-4">
+              I explored multiple domains through impactful projects:
+            </p>
+            <ul className="list-disc list-inside text-muted-foreground text-sm space-y-2 mb-8">
+                <li><b>EdTech:</b> Built SecureExam Lite, a browser-based proctoring tool using Flask, MediaPipe, and Computer Vision.</li>
+                <li><b>Healthcare:</b> Developed MedRush, an emergency-care platform featuring a Dark Ambulance model and AI-driven symptom checks.</li>
+                <li><b>FoodTech:</b> Created a Recipe AI with Hindi voice assistance for accessible cooking guidance.</li>
+                <li><b>AgroTech:</b> Designed solutions for technology-driven sustainable farming.</li>
+            </ul>
+            <div className="grid grid-cols-2 gap-4">
+              <Image
+                src="https://placehold.co/600x400.png"
+                alt="AI proctoring system UI"
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-full w-full shadow-md"
+                data-ai-hint="edtech learning"
+              />
+               <Image
+                src="https://placehold.co/600x400.png"
+                alt="Healthcare dashboard"
+                width={500}
+                height={500}
+                className="rounded-lg object-cover h-full w-full shadow-md"
+                data-ai-hint="healthcare technology"
+              />
+            </div>
+          </div>
+        ),
+    },
+    {
         title: 'Present',
         content: (
           <div>
-            <h4 className="font-bold text-lg mb-2">Exploring AI & Animation</h4>
+            <h4 className="font-bold text-lg mb-2">Strengthening Core Skills</h4>
             <p className="text-muted-foreground text-sm font-normal mb-8">
-              Currently diving into the world of Generative AI and 3D animation, combining my technical and creative skills to build new experiences.
+              Through these projects, I strengthened my foundations in HTML, CSS, and JavaScript, explored backend development with Flask, and gained hands-on experience with AI and computer vision. I am continuously learning and building new experiences.
             </p>
             <div className="grid grid-cols-2 gap-4">
               <Image
@@ -177,11 +183,11 @@ export const journeyItems = [
               />
               <Image
                 src="https://placehold.co/600x400.png"
-                alt="Blender 3D model"
+                alt="Code on a screen with multiple languages"
                 width={500}
                 height={500}
                 className="rounded-lg object-cover h-full w-full shadow-md"
-                data-ai-hint="3d modeling"
+                data-ai-hint="code editor"
               />
             </div>
           </div>
