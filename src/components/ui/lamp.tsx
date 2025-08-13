@@ -64,8 +64,8 @@ export const LampContainer = ({
             <div className="absolute top-1/2 h-48 w-full translate-y-12 scale-x-150 bg-background blur-2xl"></div>
             <div className="absolute top-1/2 z-50 h-48 w-full bg-transparent opacity-10 backdrop-blur-md"></div>
             <motion.div
-              initial={{ width: isMobile ? "4rem" : "8rem" }}
-              whileInView={{ width: isMobile ? "8rem" : "16rem" }}
+              initial={{ width: isMobile ? "8rem" : "16rem" }}
+              whileInView={{ width: isMobile ? "14rem" : "28rem" }}
               transition={{
                 delay: 0.3,
                 duration: 0.8,
@@ -74,14 +74,14 @@ export const LampContainer = ({
               className="absolute inset-auto z-50 h-36 -translate-y-1/2 rounded-full bg-cyan-500 opacity-50 blur-3xl dark:bg-purple-500"
             ></motion.div>
             <motion.div
-              initial={{ width: isMobile ? "7.5rem" : "15rem" }}
-              whileInView={{ width: isMobile ? "15rem" : "30rem" }}
+              initial={{ width: isMobile ? "4rem" : "8rem" }}
+              whileInView={{ width: isMobile ? "8rem" : "16rem" }}
               transition={{
                 delay: 0.3,
                 duration: 0.8,
                 ease: "easeInOut",
               }}
-              className="absolute inset-auto z-30 h-36 -translate-y-[7rem] rounded-full bg-cyan-400 blur-2xl dark:bg-purple-400"
+              className="absolute inset-auto z-30 h-36 w-64 -translate-y-[7rem] rounded-full bg-cyan-400 blur-2xl dark:bg-purple-400"
             ></motion.div>
             <motion.div
               initial={{ width: isMobile ? "7.5rem" : "15rem" }}
