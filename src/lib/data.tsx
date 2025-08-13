@@ -50,24 +50,14 @@ export const journeyItems = [
             <p className="text-muted-foreground text-sm font-normal mb-8">
               Began my journey in Computer Engineering, diving deep into the fundamentals of programming and computer science.
             </p>
-            <div className="grid grid-cols-2 gap-4">
-              <Image
-                src="https://placehold.co/600x400.png"
-                alt="University campus"
-                width={500}
-                height={500}
-                className="rounded-lg object-cover h-full w-full shadow-md"
-                data-ai-hint="university campus"
-              />
-              <Image
-                src="https://placehold.co/600x400.png"
-                alt="Students in a lab"
-                width={500}
-                height={500}
-                className="rounded-lg object-cover h-full w-full shadow-md"
-                data-ai-hint="science lab"
-              />
-            </div>
+            <Image
+              src="https://placehold.co/600x400.png"
+              alt="University campus"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-full w-full shadow-md"
+              data-ai-hint="university campus"
+            />
           </div>
         ),
     },
@@ -79,24 +69,14 @@ export const journeyItems = [
             <p className="text-muted-foreground text-sm font-normal mb-8">
               Achieved first place in my college’s flagship hackathon, a significant milestone early in my journey.
             </p>
-            <div className="grid grid-cols-2 gap-4">
-              <Image
-                src="https://placehold.co/600x400.png"
-                alt="Hackathon trophy"
-                width={500}
-                height={500}
-                className="rounded-lg object-cover h-full w-full shadow-md"
-                data-ai-hint="hackathon trophy"
-              />
-               <Image
-                src="https://placehold.co/600x400.png"
-                alt="Team celebrating a win"
-                width={500}
-                height={500}
-                className="rounded-lg object-cover h-full w-full shadow-md"
-                data-ai-hint="team celebration"
-              />
-            </div>
+            <Image
+              src="https://placehold.co/600x400.png"
+              alt="Hackathon trophy"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-full w-full shadow-md"
+              data-ai-hint="hackathon trophy"
+            />
           </div>
         ),
     },
@@ -170,7 +150,7 @@ export const journeyItems = [
           <div>
             <h4 className="font-bold text-lg mb-2">Strengthening Core Skills</h4>
             <p className="text-muted-foreground text-sm font-normal mb-8">
-              Through these projects, I strengthened my foundations in HTML, CSS, and JavaScript, explored backend development with Flask, and gained hands-on experience with AI and computer vision. I am continuously learning and building new experiences.
+             Currently focusing on MERN stack projects and building apps, while also exploring AI, automation, and computer vision to create intelligent and efficient solutions. I am continuously learning and building new experiences.
             </p>
             <div className="grid grid-cols-2 gap-4">
               <Image
