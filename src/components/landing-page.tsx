@@ -5,22 +5,26 @@ import { Button } from './ui/button';
 import Link from 'next/link';
 import { ArrowDown, Mail, Linkedin, Github } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { LampContainer } from './ui/lamp';
 
 const LandingPage = () => {
   return (
-    <section id="home" className="w-full h-screen flex items-center justify-center text-center">
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.h1 
-          className="text-5xl md:text-7xl font-extrabold text-primary font-headline tracking-tight mb-4"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+    <section id="home" className="w-full">
+      <LampContainer>
+        <motion.h1
+          initial={{ opacity: 0.5, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.3,
+            duration: 0.8,
+            ease: "easeInOut",
+          }}
+          className="bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
         >
           Tejas Solanki
         </motion.h1>
-        
-        <motion.div 
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+         <motion.div
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
@@ -36,22 +40,22 @@ const LandingPage = () => {
             </Link>
           </Button>
         </motion.div>
-        <motion.div 
+        <motion.div
           className="mt-8 flex justify-center gap-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+          <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-white transition-colors">
             <Github className="h-6 w-6" />
             <span className="sr-only">GitHub</span>
           </Link>
-          <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+          <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-white transition-colors">
             <Linkedin className="h-6 w-6" />
             <span className="sr-only">LinkedIn</span>
           </Link>
         </motion.div>
-      </div>
+      </LampContainer>
     </section>
   );
 };
