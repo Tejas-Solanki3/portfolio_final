@@ -14,10 +14,10 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <main className="flex-1">
-        <LampContainer className="py-20">
+        <LampContainer className="py-20 md:py-36">
           <LandingPage />
-          <AboutMe />
         </LampContainer>
+        <AboutMe />
         <Expertise />
         <Projects />
         <Gallery />
