@@ -1,6 +1,5 @@
 import Header from '@/components/header';
 import LandingPage from '@/components/landing-page';
-import Gallery from '@/components/gallery';
 import Journey from '@/components/journey';
 import Projects from '@/components/projects';
 import AboutMe from '@/components/about-me';
@@ -20,7 +19,6 @@ export default function Home() {
         </LampContainer>
         <Expertise />
         <Projects />
-        <Gallery />
         <Journey />
         <Contact />
       </main>

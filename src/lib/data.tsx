@@ -41,51 +41,6 @@ export const projects = [
   },
 ];
 
-export const galleryItems = [
-    {
-        title: 'Abstract Motion',
-        description: 'An exploration of fluid dynamics in motion graphics.',
-        imageUrl: 'https://placehold.co/600x400.png',
-        imageAiHint: 'abstract art',
-        link: 'https://example.com'
-    },
-    {
-        title: 'Character Sketch',
-        description: 'Concept art for a video game protagonist.',
-        imageUrl: 'https://placehold.co/600x400.png',
-        imageAiHint: 'character sketch',
-        link: 'https://example.com'
-    },
-    {
-        title: 'Logo Animation',
-        description: 'Bringing a brand\'s logo to life with an engaging animation.',
-        imageUrl: 'https://placehold.co/600x400.png',
-        imageAiHint: 'logo animation',
-        downloadUrl: '/downloads/logo-animation.mp4'
-    },
-    {
-        title: 'Architectural Visualization',
-        description: 'A realistic render of a modern home concept.',
-        imageUrl: 'https://placehold.co/600x400.png',
-        imageAiHint: 'modern architecture',
-        downloadUrl: '/downloads/arch-viz.png'
-    },
-    {
-        title: 'Synthwave Sunset',
-        description: 'A retro-futuristic landscape scene.',
-        imageUrl: 'https://placehold.co/600x400.png',
-        imageAiHint: 'synthwave sunset',
-        link: 'https://example.com'
-    },
-    {
-        title: 'Product Mockup',
-        description: 'A sleek mockup for a new tech gadget.',
-        imageUrl: 'https://placehold.co/600x400.png',
-        imageAiHint: 'product mockup',
-        downloadUrl: '/downloads/product-mockup.png'
-    }
-];
-
 export const journeyItems = [
     {
         title: '2023',
@@ -238,7 +193,6 @@ export const navLinks = [
   { name: 'About', hash: '#about' },
   { name: 'Expertise', hash: '#expertise' },
   { name: 'Projects', hash: '#projects' },
-  { name: 'Gallery', hash: '#gallery' },
   { name: 'Journey', hash: '#journey' },
   { name: 'Contact', hash: '#contact' },
 ];
