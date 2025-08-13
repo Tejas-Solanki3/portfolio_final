@@ -4,6 +4,8 @@ import { cn } from "@/lib/utils"
 
 const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
   ({ className, type, ...props }, ref) => {
+    // This will prevent the _gchrome_uniqueid error.
+    const { _gchrome_uniqueid, ...rest } = props as any;
     return (
       <input
         type={type}
@@ -12,7 +14,7 @@ const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
           className
         )}
         ref={ref}
-        {...props}
+        {...rest}
       />
     )
   }
