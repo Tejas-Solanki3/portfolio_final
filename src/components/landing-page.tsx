@@ -14,7 +14,12 @@ const LandingPage = () => {
       <LampContainer>
         <div className="flex flex-col items-center justify-center h-full">
           <Typewriter
-            text={['Tejas Solanki', 'Building websites', 'and more...']}
+            text={[
+              'Tejas Solanki',
+              'Building websites',
+              'Crafting backend systems',
+              'Exploring AI & ML',
+            ]}
             loop={true}
             className="bg-gradient-to-br from-yellow-300 to-yellow-500 py-4 bg-clip-text text-center text-4xl font-bold tracking-tight text-transparent md:text-7xl min-h-[168px] md:min-h-[224px]"
           />
