@@ -1,4 +1,4 @@
-import { Code, Bot, Database, Server, AppWindow, Cable } from "lucide-react";
+import { Code, Bot, Database, Server, AppWindow, Palette } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -215,9 +215,9 @@ export const expertise = [
     skills: ['React Native', 'Flutter', 'Swift'],
   },
   {
-    category: 'Animation',
-    icon: Cable,
-    description: 'Bringing ideas to life through 3D modeling and motion design.',
-    skills: ['Blender', 'Figma', 'After Effects'],
+    category: 'Designing',
+    icon: Palette,
+    description: 'Creating visually appealing designs and user interfaces.',
+    skills: ['Figma'],
   },
 ];
