@@ -65,7 +65,7 @@ export const LampContainer = ({
               <div className="absolute w-[100%] right-0 bg-background h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
             </motion.div>
 
-            <div className="absolute top-1/2 h-48 w-full translate-y-12 scale-x-150 bg-background blur-2xl"></div>
+            <div className="absolute top-1/2 h-48 w-full scale-x-150 bg-background blur-2xl"></div>
             <div className="absolute top-1/2 z-50 h-48 w-full bg-transparent opacity-10 backdrop-blur-md"></div>
             <motion.div
               initial={{ width: isMobile ? "8rem" : "16rem" }}
