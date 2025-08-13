@@ -31,7 +31,7 @@ export const LampContainer = ({
           <>
             <motion.div
               initial={{ opacity: 0.5, width: isMobile ? "7rem" : "14rem" }}
-              whileInView={{ opacity: 1, width: isMobile ? "14rem" : "29rem" }}
+              whileInView={{ opacity: 1, width: isMobile ? "14rem" : "28rem" }}
               transition={{
                 delay: 0.3,
                 duration: 0.8,
@@ -47,7 +47,7 @@ export const LampContainer = ({
             </motion.div>
             <motion.div
               initial={{ opacity: 0.5, width: isMobile ? "7rem" : "14rem" }}
-              whileInView={{ opacity: 1, width: isMobile ? "14rem" : "29rem" }}
+              whileInView={{ opacity: 1, width: isMobile ? "14rem" : "28rem" }}
               transition={{
                 delay: 0.3,
                 duration: 0.8,
@@ -65,7 +65,7 @@ export const LampContainer = ({
             <div className="absolute top-1/2 z-50 h-48 w-full bg-transparent opacity-10 backdrop-blur-md"></div>
             <motion.div
               initial={{ width: isMobile ? "8rem" : "16rem" }}
-              whileInView={{ width: isMobile ? "14rem" : "28rem" }}
+              whileInView={{ width: isMobile ? "15rem" : "30rem" }}
               transition={{
                 delay: 0.3,
                 duration: 0.8,
