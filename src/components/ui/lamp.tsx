@@ -1,8 +1,10 @@
+
 "use client";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { useTheme } from "next-themes";
 
 export const LampContainer = ({
   children,
@@ -13,6 +15,7 @@ export const LampContainer = ({
 }) => {
   const isMobile = useIsMobile();
   const [isClient, setIsClient] = useState(false);
+  const { theme } = useTheme();
 
   useEffect(() => {
     setIsClient(true);
@@ -20,9 +23,10 @@ export const LampContainer = ({
 
   return (
     <div
+      key={theme}
       className={cn(
         "relative flex min-h-[75vh] flex-col items-center justify-center overflow-hidden bg-background w-full rounded-md z-0",
-        "bg-[linear-gradient(to_right,rgba(0,0,0,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.1)_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)]",
+        "bg-[linear-gradient(to_right,rgba(0,0,0,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.05)_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)]",
         "bg-[size:40px_40px] dark:bg-[size:40px_40px]",
         className
       )}
