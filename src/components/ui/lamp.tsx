@@ -22,7 +22,7 @@ export const LampContainer = ({
     <div
       className={cn(
         "relative flex min-h-[75vh] flex-col items-center justify-center overflow-hidden bg-background w-full rounded-md z-0",
-        "bg-[linear-gradient(to_right,rgba(0,0,0,0.35)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.35)_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)]",
+        "bg-[linear-gradient(to_right,rgba(0,0,0,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.1)_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)]",
         "bg-[size:40px_40px] dark:bg-[size:40px_40px]",
         className
       )}
@@ -42,7 +42,7 @@ export const LampContainer = ({
               style={{
                 backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
               }}
-              className="absolute inset-auto right-1/2 h-56 overflow-visible from-cyan-500 via-transparent to-transparent text-white [--conic-position:from_70deg_at_center_top] dark:from-purple-500 dark:via-transparent dark:to-transparent"
+              className="absolute inset-auto right-1/2 h-56 overflow-visible from-cyan-500/30 via-transparent to-transparent text-white [--conic-position:from_70deg_at_center_top] dark:from-purple-500 dark:via-transparent dark:to-transparent"
             >
               <div className="absolute w-[100%] left-0 bg-background h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
               <div className="absolute w-40 h-[100%] left-0 bg-background bottom-0 z-20 [mask-image:linear-gradient(to_right,white,transparent)]" />
@@ -60,7 +60,7 @@ export const LampContainer = ({
               style={{
                 backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
               }}
-              className="absolute inset-auto left-1/2 h-56 from-transparent via-transparent to-cyan-500 text-white [--conic-position:from_290deg_at_center_top] dark:from-transparent dark:via-transparent dark:to-purple-500"
+              className="absolute inset-auto left-1/2 h-56 from-transparent via-transparent to-cyan-500/30 text-white [--conic-position:from_290deg_at_center_top] dark:from-transparent dark:via-transparent dark:to-purple-500"
             >
               <div className="absolute w-40 h-[100%] right-0 bg-background bottom-0 z-20 [mask-image:linear-gradient(to_left,white,transparent)]" />
               <div className="absolute w-[100%] right-0 bg-background h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]" />
