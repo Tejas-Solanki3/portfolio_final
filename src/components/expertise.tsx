@@ -3,26 +3,63 @@
 import React from 'react';
 import SectionHeading from './section-heading';
 import { expertise } from '@/lib/data';
-import { Badge } from './ui/badge';
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { motion } from 'framer-motion';
+import { GlowingEffect } from '@/components/ui/glowing-effect';
+import { cn } from '@/lib/utils';
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.1,
-      duration: 0.5
-    },
-  }),
+const gridAreas = [
+  "md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]",
+  "md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]",
+  "md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/9]",
+  "md:[grid-area:2/7/3/13] xl:[grid-area:1/9/2/13]",
+  "md:[grid-area:3/1/4/7] xl:[grid-area:2/5/3/9]",
+  "md:[grid-area:3/7/4/13] xl:[grid-area:2/9/3/13]",
+];
+
+
+interface GridItemProps {
+  area: string;
+  icon: React.ReactNode;
+  title: string;
+  description: React.ReactNode;
+}
+
+const GridItem = ({ area, icon, title, description }: GridItemProps) => {
+  return (
+    <li className={cn("min-h-[14rem] list-none", area)}>
+      <div className="relative h-full rounded-[1.25rem] border-[0.75px] border-border p-2 md:rounded-[1.5rem] md:p-3">
+        <GlowingEffect
+          spread={40}
+          glow={true}
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+          borderWidth={3}
+        />
+        <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl border-[0.75px] bg-background p-6 shadow-sm dark:shadow-[0px_0px_27px_0px_rgba(45,45,45,0.3)] md:p-6">
+          <div className="relative flex flex-1 flex-col justify-between gap-3">
+            <div className="w-fit rounded-lg border-[0.75px] border-border bg-muted p-2">
+              {icon}
+            </div>
+            <div className="space-y-3">
+              <h3 className="pt-0.5 text-xl leading-[1.375rem] font-semibold font-sans tracking-[-0.04em] md:text-2xl md:leading-[1.875rem] text-balance text-foreground">
+                {title}
+              </h3>
+              <h2 className="[&_b]:md:font-semibold [&_strong]:md:font-semibold font-sans text-sm leading-[1.125rem] md:text-base md:leading-[1.375rem] text-muted-foreground">
+                {description}
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  );
 };
 
 export default function Expertise() {
   return (
-    <motion.section 
-      id="expertise" 
+    <motion.section
+      id="expertise"
       className="py-24"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -31,36 +68,19 @@ export default function Expertise() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading>My Expertise</SectionHeading>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {expertise.map((area, index) => (
-            <motion.div
-              key={area.category}
-              custom={index}
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.4 }}
-            >
-              <Card className="h-full sketch-border flex flex-col hover:shadow-accent/20 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 group">
-                <CardHeader className="flex-row items-center gap-4">
-                  <div className="p-3 bg-accent/10 rounded-lg shadow-sm group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300">
-                    <area.icon className="h-8 w-8 text-accent transition-colors" />
-                  </div>
-                  <CardTitle className='font-headline text-2xl'>{area.category}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow flex flex-col justify-center gap-4 p-6 pt-0">
-                    <p className="text-muted-foreground text-sm">{area.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                        {area.skills.map(skill => (
-                            <Badge key={skill} variant="secondary" className="text-sm font-mono group-hover:bg-accent/20 transition-colors">{skill}</Badge>
-                        ))}
-                    </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+        <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
+            {expertise.map((area, index) => (
+                <GridItem 
+                    key={area.category}
+                    area={gridAreas[index % gridAreas.length]}
+                    icon={<area.icon className="h-4 w-4" />}
+                    title={area.category}
+                    description={area.description}
+                />
+            ))}
+        </ul>
       </div>
     </motion.section>
   );
 }
+    
