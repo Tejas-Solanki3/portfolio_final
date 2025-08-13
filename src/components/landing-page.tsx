@@ -30,10 +30,10 @@ const LandingPage = () => {
               'Exploring AI & ML',
             ]}
             loop={true}
-            className="bg-gradient-to-br from-yellow-300 to-yellow-500 py-4 bg-clip-text text-center text-3xl font-bold tracking-tight text-transparent md:text-7xl min-h-[168px] md:min-h-[224px]"
+            className="bg-gradient-to-br from-yellow-300 to-yellow-500 py-4 bg-clip-text text-center text-4xl font-bold tracking-tight text-transparent md:text-7xl min-h-[168px] md:min-h-[224px]"
           />
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-16">
             <Button asChild size="lg" variant="outline">
               <Link href="#contact">
                 Get in Touch <Mail className="ml-2 h-4 w-4" />
