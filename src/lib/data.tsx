@@ -43,7 +43,7 @@ export const projects = [
 
 export const journeyItems = [
     {
-        title: '2023',
+        title: '2024',
         content: (
           <div>
             <h4 className="font-bold text-lg mb-2">Started B.Tech</h4>
@@ -72,7 +72,7 @@ export const journeyItems = [
         ),
     },
      {
-        title: 'Late 2023',
+        title: 'Late 2024',
         content: (
           <div>
             <h4 className="font-bold text-lg mb-2">First Web Project</h4>
@@ -101,7 +101,7 @@ export const journeyItems = [
         ),
     },
     {
-        title: '2024',
+        title: '2025',
         content: (
           <div>
             <h4 className="font-bold text-lg mb-2">Joined Developer Club</h4>
@@ -130,7 +130,7 @@ export const journeyItems = [
         ),
     },
      {
-        title: 'Mid 2024',
+        title: 'Mid 2025',
         content: (
           <div>
             <h4 className="font-bold text-lg mb-2">Hackathon Winner</h4>
