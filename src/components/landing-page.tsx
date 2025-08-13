@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 
 const LandingPage = () => {
   return (
-    <section id="home" className="relative w-full h-screen flex items-center justify-center text-center overflow-hidden">
+    <section id="home" className="w-full h-screen flex items-center justify-center text-center">
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h1 
           className="text-5xl md:text-7xl font-extrabold text-primary font-headline tracking-tight mb-4"
