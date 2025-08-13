@@ -9,11 +9,7 @@ const contactSchema = z.object({
 });
 
 export async function submitContactForm(formData: FormData) {
-  const validatedFields = contactSchema.safeParse({
-    name: formData.get('name'),
-    email: formData.get('email'),
-    message: formData.get('message'),
-  });
+  const validatedFields = contactSchema.safeParse(Object.fromEntries(formData.entries()));
 
   if (!validatedFields.success) {
     return {
