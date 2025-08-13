@@ -6,24 +6,19 @@ import Link from 'next/link';
 import { ArrowDown, Mail, Linkedin, Github } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { LampContainer } from './ui/lamp';
+import { Typewriter } from './ui/typewriter-text';
 
 const LandingPage = () => {
   return (
     <section id="home" className="w-full">
       <LampContainer>
         <div className="flex flex-col items-center justify-center h-full">
-          <motion.h1
-            initial={{ opacity: 0.5, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              delay: 0.3,
-              duration: 0.8,
-              ease: "easeInOut",
-            }}
-            className="bg-gradient-to-br from-yellow-300 to-yellow-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
-          >
-            Tejas Solanki
-          </motion.h1>
+          <Typewriter
+            text={['Tejas Solanki', 'Building websites', 'and more...']}
+            loop={true}
+            className="bg-gradient-to-br from-yellow-300 to-yellow-500 py-4 bg-clip-text text-center text-4xl font-bold tracking-tight text-transparent md:text-7xl min-h-[168px] md:min-h-[224px]"
+          />
+
           <motion.div
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-16"
             initial={{ opacity: 0, scale: 0.9 }}
