@@ -1,11 +1,11 @@
 'use client';
 
 import React from 'react';
-import { Button } from './ui/button';
 import Link from 'next/link';
 import { ArrowDown, Mail, Linkedin, Github, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Typewriter } from './ui/typewriter-text';
+import { StarBorder } from './ui/star-border';
 
 const LandingPage = () => {
   return (
@@ -32,21 +32,21 @@ const LandingPage = () => {
         />
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-          <Button asChild size="lg" variant="outline">
-            <Link href="#contact">
-              Get in Touch <Mail className="ml-2 h-4 w-4" />
+          <StarBorder>
+            <Link href="#contact" className="flex items-center gap-2">
+              Get in Touch <Mail />
             </Link>
-          </Button>
-          <Button asChild size="lg">
-            <Link href="#projects">
-              View My Work <ArrowDown className="ml-2 h-4 w-4" />
+          </StarBorder>
+          <StarBorder>
+            <Link href="#projects" className="flex items-center gap-2">
+              View My Work <ArrowDown />
             </Link>
-          </Button>
-          <Button asChild size="lg" variant="outline">
-            <a href="/resume.pdf" download>
-              Download Resume <Download className="ml-2 h-4 w-4" />
+          </StarBorder>
+          <StarBorder>
+            <a href="/resume.pdf" download className="flex items-center gap-2">
+              Download Resume <Download />
             </a>
-          </Button>
+          </StarBorder>
         </div>
         <div className="mt-8 flex justify-center gap-6">
           <Link
