@@ -21,8 +21,9 @@ export const LampContainer = ({
   return (
     <div
       className={cn(
-        "relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-background w-full rounded-md z-0",
-        "bg-[linear-gradient(to_right,rgba(0,0,0,0.35)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.35)_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:28px_48px] dark:bg-[size:28px_48px]",
+        "relative flex min-h-[75vh] flex-col items-center justify-center overflow-hidden bg-background w-full rounded-md z-0",
+        "bg-[linear-gradient(to_right,rgba(0,0,0,0.35)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.35)_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)]",
+        "bg-[size:40px_40px] dark:bg-[size:40px_40px]",
         className
       )}
     >
