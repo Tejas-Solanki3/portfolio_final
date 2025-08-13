@@ -3,9 +3,8 @@
 import React from 'react';
 import { Button } from './ui/button';
 import Link from 'next/link';
-import { ArrowDown, Mail, Linkedin, Github } from 'lucide-react';
+import { ArrowDown, Mail, Linkedin, Github, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { LampContainer } from './ui/lamp';
 import { Typewriter } from './ui/typewriter-text';
 
 const LandingPage = () => {
@@ -42,6 +41,11 @@ const LandingPage = () => {
             <Link href="#projects">
               View My Work <ArrowDown className="ml-2 h-4 w-4" />
             </Link>
+          </Button>
+          <Button asChild size="lg" variant="outline">
+            <a href="/resume.pdf" download>
+              Download Resume <Download className="ml-2 h-4 w-4" />
+            </a>
           </Button>
         </div>
         <div className="mt-8 flex justify-center gap-6">
