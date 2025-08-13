@@ -45,7 +45,7 @@ const LandingPage = () => {
               </Link>
             </Button>
           </div>
-          <div className="mt-8 flex justify-center gap-6">
+          <div className="mt-4 flex justify-center gap-6">
             <Link
               href="https://github.com"
               target="_blank"
