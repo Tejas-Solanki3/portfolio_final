@@ -30,7 +30,7 @@ const LandingPage = () => {
               'Exploring AI & ML',
             ]}
             loop={true}
-            className="bg-gradient-to-br from-yellow-300 to-yellow-500 py-4 bg-clip-text text-center text-4xl font-bold tracking-tight text-transparent md:text-7xl min-h-[168px] md:min-h-[224px]"
+            className="bg-gradient-to-br from-primary via-accent to-blue-300 py-4 bg-clip-text text-center text-4xl font-bold tracking-tight text-transparent md:text-7xl min-h-[168px] md:min-h-[224px]"
           />
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-16">
@@ -50,7 +50,7 @@ const LandingPage = () => {
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-white transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Github className="h-6 w-6" />
               <span className="sr-only">GitHub</span>
@@ -59,7 +59,7 @@ const LandingPage = () => {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-white transition-colors"
+              className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Linkedin className="h-6 w-6" />
               <span className="sr-only">LinkedIn</span>
