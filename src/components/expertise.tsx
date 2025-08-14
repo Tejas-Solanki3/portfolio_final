@@ -8,12 +8,12 @@ import { GlowingEffect } from '@/components/ui/glowing-effect';
 import { cn } from '@/lib/utils';
 
 const gridAreas = [
-  "md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]",
-  "md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]",
-  "md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/9]",
-  "md:[grid-area:2/7/3/13] xl:[grid-area:1/9/2/13]",
-  "md:[grid-area:3/1/4/7] xl:[grid-area:2/5/3/9]",
-  "md:[grid-area:3/7/4/13] xl:[grid-area:2/9/3/13]",
+  "md:col-span-6 xl:col-span-4",
+  "md:col-span-6 xl:col-span-4",
+  "md:col-span-6 xl:col-span-4",
+  "md:col-span-6 xl:col-span-4",
+  "md:col-span-6 xl:col-span-4",
+  "md:col-span-6 xl:col-span-4",
 ];
 
 
@@ -68,7 +68,7 @@ export default function Expertise() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading>My Expertise</SectionHeading>
-        <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
+        <ul className="grid grid-cols-1 md:grid-cols-12 gap-4">
             {expertise.map((area, index) => (
                 <GridItem 
                     key={area.category}
@@ -83,4 +83,3 @@ export default function Expertise() {
     </motion.section>
   );
 }
-    
