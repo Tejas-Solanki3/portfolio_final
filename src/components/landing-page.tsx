@@ -63,6 +63,7 @@ const LandingPage = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors"
+            
           >
             <Linkedin className="h-6 w-6" />
             <span className="sr-only">LinkedIn</span>
