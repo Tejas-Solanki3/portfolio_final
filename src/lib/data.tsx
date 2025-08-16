@@ -1,6 +1,10 @@
 import { Code, Bot, Database, Server, AppWindow, Palette } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+import buildathonImg from "@/assets/buildathon.png";
+import started from "@/assets/start.png";
+import piwotOne from "@/assets/piwot1.png";
+import piwotTwo from "@/assets/piwot2.png";
 
 export const projects = [
   {
@@ -19,7 +23,7 @@ export const projects = [
     imageUrl: 'https://placehold.co/600x400.png',
     imageAiHint: '3d animation',
     link: 'https://github.com',
-    category: 'animation',
+    category: 'web development',
   },
   {
     title: 'Event Discovery App',
@@ -46,16 +50,16 @@ export const journeyItems = [
         title: '2024',
         content: (
           <div>
-            <h4 className="font-bold text-lg mb-2">Started B.Tech</h4>
-            <p className="text-muted-foreground text-sm font-normal mb-8">
+            <h4 className="font-bold text-lg mb-4">Started B.Tech</h4>
+            <p className="text-muted-foreground text-sm font-normal mb-6">
               Began my journey in Computer Engineering, diving deep into the fundamentals of programming and computer science.
             </p>
             <Image
-              src="https://placehold.co/600x400.png"
-              alt="University campus"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-full w-full shadow-md"
+              src={started}
+              alt="Me"
+              width={350}
+              height={350}
+              className="rounded-lg object-cover shadow-md mt-4"
               data-ai-hint="university campus"
             />
           </div>
@@ -65,16 +69,16 @@ export const journeyItems = [
         title: 'Dec 2024',
         content: (
           <div>
-            <h4 className="font-bold text-lg mb-2">Won ITM Buildathon 3.0</h4>
-            <p className="text-muted-foreground text-sm font-normal mb-8">
+            <h4 className="font-bold text-lg mb-4">Won ITM Buildathon 3.0</h4>
+            <p className="text-muted-foreground text-sm font-normal mb-6">
               Achieved first place in my college’s flagship hackathon, a significant milestone early in my journey.
             </p>
             <Image
-              src="https://placehold.co/600x400.png"
-              alt="Hackathon trophy"
-              width={500}
-              height={500}
-              className="rounded-lg object-cover h-full w-full shadow-md"
+              src= {buildathonImg}
+              alt="ITM Hackathon trophy"
+              width={350}
+              height={350}
+              className="rounded-lg object-cover shadow-md mt-4"
               data-ai-hint="hackathon trophy"
             />
           </div>
@@ -84,25 +88,25 @@ export const journeyItems = [
         title: 'Feb 2025',
         content: (
           <div>
-            <h4 className="font-bold text-lg mb-2">Won IMAGINE Hackathon (PIWOT)</h4>
-            <p className="text-muted-foreground text-sm font-normal mb-8">
+            <h4 className="font-bold text-lg mb-4">Won IMAGINE Hackathon (PIWOT)</h4>
+            <p className="text-muted-foreground text-sm font-normal mb-6">
              Secured a victory in a prestigious national-level hackathon organized by the PanIIT Alumni India, competing against top talent.
             </p>
             <div className="grid grid-cols-2 gap-4">
               <Image
-                src="https://placehold.co/600x400.png"
+                src={piwotOne}
                 alt="Group of developers at a hackathon"
-                width={500}
-                height={500}
-                className="rounded-lg object-cover h-full w-full shadow-md"
+                width={350}
+                height={350}
+                className="rounded-lg object-cover shadow-md mt-4"
                 data-ai-hint="hackathon event"
               />
               <Image
-                src="https://placehold.co/600x400.png"
+                src={piwotTwo}
                 alt="PanIIT logo"
-                width={500}
-                height={500}
-                className="rounded-lg object-contain h-full w-full shadow-md"
+                width={350}
+                height={350}
+                className="rounded-lg object-cover shadow-md mt-4"
                 data-ai-hint="tech logo"
               />
             </div>
@@ -113,8 +117,8 @@ export const journeyItems = [
         title: 'Project Journey',
         content: (
           <div>
-            <h4 className="font-bold text-lg mb-2">Exploring Diverse Tech Domains</h4>
-            <p className="text-muted-foreground text-sm font-normal mb-4">
+            <h4 className="font-bold text-lg mb-4">Exploring Diverse Tech Domains</h4>
+            <p className="text-muted-foreground text-sm font-normal mb-6">
               I explored multiple domains through impactful projects:
             </p>
             <ul className="list-disc list-inside text-muted-foreground text-sm space-y-2 mb-8">
@@ -125,19 +129,19 @@ export const journeyItems = [
             </ul>
             <div className="grid grid-cols-2 gap-4">
               <Image
-                src="https://placehold.co/600x400.png"
+                src="https://placehold.co/250x250.png"
                 alt="AI proctoring system UI"
-                width={500}
-                height={500}
-                className="rounded-lg object-cover h-full w-full shadow-md"
+                width={350}
+                height={350}
+                className="rounded-lg object-cover shadow-md mt-4"
                 data-ai-hint="edtech learning"
               />
                <Image
-                src="https://placehold.co/600x400.png"
+                src="https://placehold.co/250x250.png"
                 alt="Healthcare dashboard"
-                width={500}
-                height={500}
-                className="rounded-lg object-cover h-full w-full shadow-md"
+                width={350}
+                height={350}
+                className="rounded-lg object-cover shadow-md mt-4"
                 data-ai-hint="healthcare technology"
               />
             </div>
@@ -148,25 +152,25 @@ export const journeyItems = [
         title: 'Present',
         content: (
           <div>
-            <h4 className="font-bold text-lg mb-2">Strengthening Core Skills</h4>
-            <p className="text-muted-foreground text-sm font-normal mb-8">
+            <h4 className="font-bold text-lg mb-4">Strengthening Core Skills</h4>
+            <p className="text-muted-foreground text-sm font-normal mb-6">
              Currently focusing on MERN stack projects and building apps, while also exploring AI, automation, and computer vision to create intelligent and efficient solutions. I am continuously learning and building new experiences.
             </p>
             <div className="grid grid-cols-2 gap-4">
               <Image
-                src="https://placehold.co/600x400.png"
+                src="https://placehold.co/250x250.png"
                 alt="AI neural network"
-                width={500}
-                height={500}
-                className="rounded-lg object-cover h-full w-full shadow-md"
+                width={350}
+                height={350}
+                className="rounded-lg object-cover shadow-md mt-4"
                 data-ai-hint="artificial intelligence"
               />
               <Image
-                src="https://placehold.co/600x400.png"
+                src="https://placehold.co/250x250.png"
                 alt="Code on a screen with multiple languages"
-                width={500}
-                height={500}
-                className="rounded-lg object-cover h-full w-full shadow-md"
+                width={350}
+                height={350}
+                className="rounded-lg object-cover shadow-md mt-4"
                 data-ai-hint="code editor"
               />
             </div>

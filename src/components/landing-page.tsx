@@ -50,7 +50,7 @@ const LandingPage = () => {
         </div>
         <div className="mt-8 flex justify-center gap-6">
           <Link
-            href="https://github.com"
+            href="https://github.com/Tejas-Solanki3"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors"
@@ -59,7 +59,7 @@ const LandingPage = () => {
             <span className="sr-only">GitHub</span>
           </Link>
           <Link
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/tejas-solanki2006/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors"
